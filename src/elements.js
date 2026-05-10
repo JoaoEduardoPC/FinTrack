@@ -1,0 +1,37 @@
+export const el = {
+  loginView: document.getElementById("login-view"),
+  appView: document.getElementById("app-view"),
+  loginForm: document.getElementById("login-form"),
+  loginError: document.getElementById("login-error"),
+  welcomeText: document.getElementById("welcome-text"),
+  logoutBtn: document.getElementById("logout-btn"),
+  tabs: Array.from(document.querySelectorAll(".tab")),
+  views: Array.from(document.querySelectorAll(".view")),
+  // Dashboard
+  balanceValue: document.getElementById("balance-value"),
+  investedValue: document.getElementById("invested-value"),
+  kpiIncome: document.getElementById("kpi-income"),
+  kpiExpense: document.getElementById("kpi-expense"),
+  kpiBalance: document.getElementById("kpi-balance"),
+  kpiWealth: document.getElementById("kpi-wealth"),
+  dashDate: document.getElementById("dash-date"),
+  // Monthly
+  monthlySummary: document.getElementById("monthly-summary"),
+  monthlyBadge: document.getElementById("monthly-badge"),
+  monthlyPct: document.getElementById("monthly-pct"),
+  monthlyBar: document.getElementById("monthly-progress-bar"),
+  monthlyHint: document.getElementById("monthly-progress-hint"),
+  monthlyTopList: document.getElementById("monthly-top-list"),
+  // Cash flow
+  expensesBody: document.getElementById("expenses-body"),
+  expenseForm: document.getElementById("expense-form"),
+  incomeBody: document.getElementById("incomes-body"),
+  incomeForm: document.getElementById("income-form"),
+  editDialog: document.getElementById("edit-dialog"),
+  editForm: document.getElementById("edit-form"),
+  // Simulator
+  simulatorForm: document.getElementById("simulator-form"),
+  simResultValue: document.getElementById("sim-result-value"),
+  simContributed: document.getElementById("sim-contributed"),
+  simGain: document.getElementById("sim-gain"),
+};
