@@ -1,6 +1,12 @@
 import { state } from "./state.js";
 import { el } from "./elements.js";
-import { handleLogin, setAuthView, activateTab } from "./auth.js";
+import {
+  handleLogin,
+  handleRegister,
+  toggleAuthMode,
+  setAuthView,
+  activateTab,
+} from "./auth.js";
 import { handleSimulator } from "./views/simulator.js";
 import {
   handleAddExpense,
@@ -13,12 +19,23 @@ import {
 
 export function bindEvents() {
   el.loginForm.addEventListener("submit", handleLogin);
+  el.registerForm.addEventListener("submit", handleRegister);
+
+  el.showRegisterLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleAuthMode("register");
+  });
+  el.showLoginLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleAuthMode("login");
+  });
 
   el.tabs.forEach((tab) => {
     tab.addEventListener("click", () => activateTab(tab.dataset.view));
   });
 
   el.logoutBtn.addEventListener("click", () => {
+    sessionStorage.removeItem("fintrack_session");
     state.user = null;
     el.loginForm.reset();
     setAuthView(false);

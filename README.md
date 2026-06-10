@@ -2,6 +2,9 @@
 
 Aplicação web de controle de gastos e gerenciamento de investimentos. Desenvolvida em HTML, CSS e JavaScript puro, sem dependência de frameworks ou build tools.
 
+> **Projeto Integrador III — CEUB 2026**
+> Professor: Ricardo Alves Neiva
+
 ---
 
 ## Como executar localmente
@@ -31,9 +34,9 @@ npx serve .
 
 ## Credenciais de acesso
 
-| Campo  | Valor      |
-|--------|------------|
-| Usuário | `Claudio` |
+| Campo   | Valor      |
+|---------|------------|
+| Usuário | `Claudio`  |
 | Senha   | `12345678` |
 
 ---
@@ -71,8 +74,12 @@ npx serve .
 
 ```
 Gerenciador-de-Investimentos/
-├── index.html          # Estrutura HTML e todas as views
-├── styles.css          # Estilos e responsividade
+├── index.html               # Estrutura HTML e todas as views
+├── styles.css               # Estilos e responsividade
+├── APRESENTACAO.html        # Apresentação final — 17 slides navegáveis (Sistematização 2)
+├── COLETA_DE_OPINOES.md     # Relato dos 4 usuários simulados + resultados (Sistematização 2)
+├── DOCUMENTO_INTEGRADOR.md  # Documento integrador com todas as etapas (Sistematização 2)
+├── PLANO_IMPLANTACAO.md     # Plano de implantação e 15 KPIs de impacto
 └── src/
     ├── main.js         # Entrypoint — inicializa a aplicação
     ├── state.js        # Estado global e dados padrão
@@ -88,6 +95,17 @@ Gerenciador-de-Investimentos/
         ├── monthly.js     # Resumo mensal
         └── simulator.js   # Simulador de investimentos
 ```
+
+---
+
+## Documentação acadêmica (Sistematização 2)
+
+| Arquivo | Descrição |
+|---------|-----------|
+| `COLETA_DE_OPINOES.md` | Simulação de 4 usuários (Gabriela, Eduardo, Isaías, Nira) com relatos, notas por critério e análise consolidada. Média geral: **4,50/5,00**. |
+| `DOCUMENTO_INTEGRADOR.md` | Documento integrador com introdução, metodologia, entregas de cada etapa, protótipo, resultados e análise crítica, lições aprendidas e próximos passos. |
+| `APRESENTACAO.html` | Apresentação final com 17 slides navegáveis. Abrir via servidor local: `http://localhost:8080/APRESENTACAO.html`. Navegação por teclado (←/→), clique nos pontos ou swipe. |
+| `PLANO_IMPLANTACAO.md` | Plano de implantação em 5 etapas, cronograma de 0–18 meses, recursos e 15 KPIs em 4 dimensões. |
 
 ---
 

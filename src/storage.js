@@ -1,8 +1,13 @@
-import { state, STORAGE_KEY } from "./state.js";
+import { state } from "./state.js";
+
+function storageKey(userId) {
+  return `fintrack_data_${userId.toLowerCase()}`;
+}
 
 export function saveToStorage() {
+  if (!state.user) return;
   localStorage.setItem(
-    STORAGE_KEY,
+    storageKey(state.user),
     JSON.stringify({
       expenses: state.expenses,
       incomes: state.incomes,
@@ -13,9 +18,9 @@ export function saveToStorage() {
   );
 }
 
-export function loadFromStorage() {
+export function loadFromStorage(userId) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey(userId));
     if (!raw) return;
     const saved = JSON.parse(raw);
 

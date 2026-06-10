@@ -68,3 +68,15 @@ export const state = {
   expenses: DEFAULT_EXPENSES.map((e) => ({ ...e })),
   incomes: DEFAULT_INCOMES.map((e) => ({ ...e })),
 };
+
+export function resetStateData(userId) {
+  const isDemo = userId === AUTH_USER;
+  state.expenses = isDemo ? DEFAULT_EXPENSES.map((e) => ({ ...e })) : [];
+  state.incomes = isDemo ? DEFAULT_INCOMES.map((e) => ({ ...e })) : [];
+  state._nextId = isDemo ? 6 : 1;
+  state._nextIncomeId = isDemo ? 3 : 1;
+  state.financial = {
+    availableMoney: isDemo ? 12450.75 : 0,
+    investedAmount: isDemo ? 36780.4 : 0,
+  };
+}

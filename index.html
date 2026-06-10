@@ -17,7 +17,7 @@
 
         <form id="login-form" class="form">
           <label for="username">Usuário</label>
-          <input id="username" name="username" type="text" placeholder="Digite seu usuário" required />
+          <input id="username" name="username" type="text" placeholder="Digite seu usuário" maxlength="80" required />
 
           <label for="password">Senha</label>
           <input id="password" name="password" type="password" placeholder="Digite sua senha" required />
@@ -26,6 +26,26 @@
           <p class="hint">Login de teste: Claudio / 12345678</p>
           <p id="login-error" class="error" role="alert"></p>
         </form>
+
+        <form id="register-form" class="form" style="display:none">
+          <label for="reg-name">Nome</label>
+          <input id="reg-name" name="nome" type="text" placeholder="Seu nome completo" maxlength="80" required />
+
+          <label for="reg-email">E-mail</label>
+          <input id="reg-email" name="email" type="email" placeholder="seu@email.com" maxlength="120" required />
+
+          <label for="reg-password">Senha</label>
+          <input id="reg-password" name="senha" type="password" placeholder="Mínimo 6 caracteres" minlength="6" maxlength="128" required />
+
+          <button type="submit">Criar conta</button>
+          <p id="register-error" class="error" role="alert"></p>
+          <p id="register-success" class="success" style="display:none" aria-live="polite"></p>
+        </form>
+
+        <p class="auth-toggle">
+          <span id="toggle-to-register">Não tem conta? <a href="#" id="show-register">Criar conta</a></span>
+          <span id="toggle-to-login" style="display:none">Já tem conta? <a href="#" id="show-login">Entrar</a></span>
+        </p>
       </section>
 
       <section id="app-view" class="app-view" aria-live="polite">
